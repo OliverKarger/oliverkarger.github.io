@@ -1,4 +1,6 @@
 import {Component} from '@angular/core';
+import {faUserCircle, faHome, faBlog, faIdCard} from '@fortawesome/free-solid-svg-icons';
+import {faGitAlt} from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -14,4 +16,9 @@ import {Component} from '@angular/core';
  */
 export class AppComponent {
   title = 'app';
+  navUserCircleSymbol = faUserCircle;
+  navProjectSymbol = faGitAlt;
+  navHomeIcon = faHome;
+  navBlogIcon = faBlog;
+  navContactIcon = faIdCard;
 }
