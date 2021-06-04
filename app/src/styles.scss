@@ -23,12 +23,9 @@
 .flex-grid {
     display: flex;
 }
-.flex-row {
+.flex-row { /* Displays inline */
     flex-direction: row;
 }
-.flex-col {
+.flex-col { /* Displays block */
     flex-direction: column;
-}
-.inline-flex-grid {
-    display: inline-flex;
 }

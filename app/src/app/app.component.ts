@@ -4,6 +4,7 @@ import {
   faHome,
   faBlog,
   faIdCard,
+  faCog,
 } from '@fortawesome/free-solid-svg-icons';
 import {faGitAlt} from '@fortawesome/free-brands-svg-icons';
 
@@ -26,4 +27,5 @@ export class AppComponent {
   navHomeIcon = faHome;
   navBlogIcon = faBlog;
   navContactIcon = faIdCard;
+  loadingSymbol = faCog;
 }
