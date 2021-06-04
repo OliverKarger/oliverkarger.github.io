@@ -54,5 +54,18 @@ main {
   }
 }
 
+@media screen and (max-width: 800px) {
+  main{
+    .navbar {
+      .nav-item {
+        display: inline-block;
+        fa-icon {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
 
 
