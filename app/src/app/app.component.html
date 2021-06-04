@@ -1,5 +1,5 @@
 <main class="flex-grid">
-  <header class="flex-grid navbar">
+  <header class="flex-grid navbar navbar-left" #navbar>
     <ul class="flex-grid flex-col navbar-nav">
       <li class="flex-grid nav-item">
         <fa-icon [icon]="navHomeIcon" size="2x"></fa-icon>
@@ -33,5 +33,10 @@
       <fa-icon [icon]="loadingSymbol" [spin]="true" size="6x"></fa-icon>
       <h1>An dieser Seite wird aktuell gearbeitet!</h1>
     </div>
+  </div>
+  <div class="flex-grid toggle-nav">
+    <a #toggleNavButton (click)="toggleNav()">
+      <fa-icon [icon]="toggleNavIcon"></fa-icon>
+    </a>
   </div>
 </main>
