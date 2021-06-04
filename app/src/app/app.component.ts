@@ -1,5 +1,10 @@
 import {Component} from '@angular/core';
-import {faUserCircle, faHome, faBlog, faIdCard} from '@fortawesome/free-solid-svg-icons';
+import {
+  faUserCircle,
+  faHome,
+  faBlog,
+  faIdCard,
+} from '@fortawesome/free-solid-svg-icons';
 import {faGitAlt} from '@fortawesome/free-brands-svg-icons';
 
 @Component({
