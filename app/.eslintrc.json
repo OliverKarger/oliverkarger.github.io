@@ -21,5 +21,5 @@
         "prettier/prettier": ["error"],
         "new-cap": "off" /* Use 'cause of @Component from Angular, it violates that rule */ 
     },
-    "ignorePatterns": ["./node_modules/*", "package-lock.json"]
+    "ignorePatterns": ["./node_modules/*", "package-lock.json", "./assets/style-template"]
 }

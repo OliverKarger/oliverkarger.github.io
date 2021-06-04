@@ -1,23 +1,34 @@
-@import "../assets/style-template/apple.scss";
+@import '../assets/style-template/apple.scss';
 
 $default-bg: #1d1d1d;
 
-main{
+main {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+.navbar {
+    width: 90%;
+    height: auto;
     top: 0;
-    left: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    position: fixed;
+    background-color: rgba(209, 209, 209, 50%);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    margin-top: 1rem;
 }
-
-.navbar{
-    list-style: none;
-}
-.navbar-nav li {
+.nav-item {
+    margin: 0;
     padding: 1rem;
-    font-size: 18px;
-}
-.navbar-nav li:hover{
-    background-color: $appl-blue;
+    border-radius: 10px;
+    font-weight: 700;
     color: #fafafa;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+.nav-item:hover a{
+    top: -10px !important;
 }
