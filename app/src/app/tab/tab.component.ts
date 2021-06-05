@@ -1,7 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {TabsComponent} from './../tabs/tabs.component';
+import {Component} from '@angular/core';
 
 @Component({
-  selector: 'app-tab',
+  selector: 'tab',
   templateUrl: './tab.component.html',
   styleUrls: ['./tab.component.scss'],
 })
@@ -11,20 +12,14 @@ import {Component, OnInit} from '@angular/core';
  * @date 06/06/2021
  * @export
  * @class TabComponent
- * @implements {OnInit}
  */
-export class TabComponent implements OnInit {
+export class TabComponent {
   /**
    * Creates an instance of TabComponent.
    * @author Oliver Karger <kmaster@oliver-karger.de>
    * @date 06/06/2021
+   * @param {TabsComponent} tabs Für Angular's -Dependency Injection- benötigt
    * @memberof TabComponent
    */
-  constructor() {}
-  /**
-   * @author Oliver Karger <kmaster@oliver-karger.de>
-   * @date 06/06/2021
-   * @memberof TabComponent
-   */
-  ngOnInit(): void {}
+  constructor(tabs: TabsComponent) {}
 }

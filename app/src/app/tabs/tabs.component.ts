@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
-  selector: 'app-tabs',
+  selector: 'tabs',
   templateUrl: './tabs.component.html',
   styleUrls: ['./tabs.component.scss'],
 })
@@ -11,9 +11,8 @@ import {Component, OnInit} from '@angular/core';
  * @date 06/06/2021
  * @export
  * @class TabsComponent
- * @implements {OnInit}
  */
-export class TabsComponent implements OnInit {
+export class TabsComponent {
   /**
    * Creates an instance of TabsComponent.
    * @author Oliver Karger <kmaster@oliver-karger.de>
@@ -21,10 +20,7 @@ export class TabsComponent implements OnInit {
    * @memberof TabsComponent
    */
   constructor() {}
-  /**
-   * @author Oliver Karger <kmaster@oliver-karger.de>
-   * @date 06/06/2021
-   * @memberof TabsComponent
-   */
-  ngOnInit(): void {}
+
+  // Aktives Tab
+  @Input() activeTab: number = 1;
 }
