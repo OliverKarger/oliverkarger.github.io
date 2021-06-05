@@ -25,10 +25,8 @@ import {faGitAlt} from '@fortawesome/free-brands-svg-icons';
 export class AppComponent {
   @ViewChild('toggleNavButton', {read: ElementRef, static: false})
   toggleNavButton?: ElementRef;
-  @ViewChild('navbar', {read: ElementRef, static: false})
-  navigation?: ElementRef;
 
-  title = 'app';
+  title = 'Oliver Karger';
   navUserCircleSymbol = faUserCircle;
   navProjectSymbol = faGitAlt;
   navHomeIcon = faHome;
@@ -36,27 +34,22 @@ export class AppComponent {
   navContactIcon = faIdCard;
   loadingSymbol = faCog;
   toggleNavIcon = faToggleOff;
-  navState: navMode = 'navbar-left';
 
+  underConstruction: boolean = true;
+  navAlign: boolean = false;
   /**
-   * @description Toggle navbar between sidenav and nav
+   * @description Toggles Nav Display
    * @author Oliver Karger <kmaster@oliver-karger.de>
-   * @date 04/06/2021
+   * @date 05/06/2021
    * @memberof AppComponent
    */
-  toggleNav() {
-    if (this.navState === 'navbar-top') {
-      this.navigation?.nativeElement.classList.remove('navbar-top');
-      this.navigation?.nativeElement.classList.add('navbar-left');
-      this.navState = 'navbar-left';
-      this.toggleNavIcon = faToggleOff;
-    } else if (this.navState === 'navbar-left') {
-      this.navigation?.nativeElement.classList.remove('navbar-left');
-      this.navigation?.nativeElement.classList.add('navbar-top');
-      this.navState = 'navbar-top';
+  navToggle() {
+    if (this.navAlign === true) {
+      this.navAlign = false;
       this.toggleNavIcon = faToggleOn;
+    } else if (this.navAlign === false) {
+      this.navAlign = true;
+      this.toggleNavIcon = faToggleOff;
     }
   }
 }
-
-type navMode = 'navbar-top' | 'navbar-left';

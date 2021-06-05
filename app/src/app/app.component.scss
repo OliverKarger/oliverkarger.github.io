@@ -9,48 +9,6 @@ main {
   width: 100%;
   height: 100%;
   justify-content: center;
-  .navbar {
-    background-color: rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(0, 0, 0, 0.4);
-    border-radius: 10px;
-    backdrop-filter: blur(5px);
-    color: #fafafa;
-    .navbar-nav {
-      align-items: flex-start;
-      .nav-item {
-        margin: 0.7rem;
-        cursor: pointer;
-        font-weight: 700;
-        font-size: 18px;
-        justify-content: center;
-        align-items: center;
-        vertical-align: middle;
-        display: flex;
-      }
-      .nav-item-active {
-        backdrop-filter: blur(0);
-      }
-    }
-  }
-  .navbar-left {
-    position: fixed;
-    left: 0;
-    margin-left: 1rem;
-    margin-top: 1rem;
-    width: auto;
-    height: auto;
-  }
-  .navbar-top {
-    position: fixed;
-    top: 0;
-    margin-top: 1rem;
-    width: auto;
-    height: auto;
-    .navbar-nav {
-      flex-direction: row;
-      justify-content: center;
-    }
-  }
   .body {
     justify-content: center;
     align-items: center;
@@ -58,12 +16,7 @@ main {
     .loading-symbol {
       margin: auto;
       justify-content: center;
-      color: #fafafa;
-      background-color: rgba(0, 0, 0, 0.3);
-      border: 1px solid rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(5px);
       padding: 1rem;
-      border-radius: 10px;
       align-items: center;
     }
   }
@@ -74,10 +27,6 @@ main {
     padding: 0.5rem;
     margin: 0.5rem;
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(0, 0, 0, 0.4);
-    border-radius: 10px;
-    backdrop-filter: blur(5px);
   }
 }
 

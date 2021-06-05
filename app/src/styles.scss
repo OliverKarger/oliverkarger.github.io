@@ -1,31 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;700&display=swap');
 
 :root {
-    body {
-        font-family: "Noto Sans TC", sans-serif;
-        top: 0;
-        left: 0;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-image: url("./assets/img/pexels-jessica-lewis-583846.jpg");
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-    }
-    *{
-        margin: 0;
-        padding: 0;
-    }
+  body {
+    font-family: 'Noto Sans TC', sans-serif;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('./assets/img/pexels-jessica-lewis-583846.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+  }
 }
-
+.glass-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  color: #fafafa;
+}
 .flex-grid {
-    display: flex;
+  display: flex;
 }
-.flex-row { /* Displays inline */
-    flex-direction: row;
+.flex-row {
+  /* Displays inline */
+  flex-direction: row;
 }
-.flex-col { /* Displays block */
-    flex-direction: column;
+.flex-col {
+  /* Displays block */
+  flex-direction: column;
 }
