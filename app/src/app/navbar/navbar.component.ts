@@ -32,6 +32,7 @@ export class NavbarComponent implements OnChanges {
   navigation?: ElementRef;
 
   @Input() alignTop: boolean = false;
+  @Input() langData: any;
 
   navUserCircleSymbol = faUserCircle;
   navProjectSymbol = faGitAlt;

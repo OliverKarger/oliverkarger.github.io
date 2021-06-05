@@ -20,13 +20,16 @@ main {
       align-items: center;
     }
   }
-  .toggle-nav {
+  .page-controls {
     bottom: 0;
     right: 0;
     position: fixed;
     padding: 0.5rem;
     margin: 0.5rem;
-    cursor: pointer;
+    .toggle {
+      margin: 0.2rem;
+      cursor: pointer;
+    }
   }
 }
 

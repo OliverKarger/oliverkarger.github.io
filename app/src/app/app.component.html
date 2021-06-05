@@ -1,17 +1,24 @@
 <main class="flex-grid">
-  <navbar [alignTop]="navAlign"></navbar>
+  <navbar [alignTop]="navAlign" [langData]="langData"></navbar>
   <div class="body flex-grid">
     <div
       class="loading-symbol flex-grid flex-col glass-container"
       #loadingContainer
     >
       <fa-icon [icon]="loadingSymbol" [spin]="true" size="6x"></fa-icon>
-      <h1>Currently under Construction!</h1>
+      <h1>{{ langData.underConstruction }}</h1>
     </div>
   </div>
-  <div class="flex-grid toggle-nav glass-container">
-    <a #toggleNavButton (click)="navToggle()">
-      <fa-icon [icon]="toggleNavIcon"></fa-icon>
-    </a>
+  <div class="page-controls flex-grid glass-container">
+    <div class="flex-grid toggle">
+      <a (click)="navToggle()">
+        <fa-icon [icon]="toggleNavIcon"></fa-icon>
+      </a>
+    </div>
+    <div class="flex-grid toggle">
+      <a (click)="langToggle()">
+        <fa-icon [icon]="toggleLangIcon"></fa-icon>
+      </a>
+    </div>
   </div>
 </main>

@@ -7,8 +7,10 @@ import {
   faCog,
   faToggleOff,
   faToggleOn,
+  faFlag,
 } from '@fortawesome/free-solid-svg-icons';
 import {faGitAlt} from '@fortawesome/free-brands-svg-icons';
+import {lang} from '../lang';
 
 @Component({
   selector: 'app-root',
@@ -34,9 +36,12 @@ export class AppComponent {
   navContactIcon = faIdCard;
   loadingSymbol = faCog;
   toggleNavIcon = faToggleOff;
+  toggleLangIcon = faFlag;
+  langData = lang.de;
 
   underConstruction: boolean = true;
-  navAlign: boolean = false;
+  navAlign: boolean = false; // false = left, true = top
+  langMode: boolean = false; // false = DE, true = EN
   /**
    * @description Toggles Nav Display
    * @author Oliver Karger <kmaster@oliver-karger.de>
@@ -44,12 +49,27 @@ export class AppComponent {
    * @memberof AppComponent
    */
   navToggle() {
-    if (this.navAlign === true) {
+    if (this.navAlign) {
       this.navAlign = false;
       this.toggleNavIcon = faToggleOn;
-    } else if (this.navAlign === false) {
+    } else if (!this.navAlign) {
       this.navAlign = true;
       this.toggleNavIcon = faToggleOff;
+    }
+  }
+  /**
+   * @description Switch Language between EN and DE
+   * @author Oliver Karger <kmaster@oliver-karger.de>
+   * @date 05/06/2021
+   * @memberof AppComponent
+   */
+  langToggle() {
+    if (this.langMode) {
+      this.langData = lang.en;
+      this.langMode = false;
+    } else {
+      this.langData = lang.de;
+      this.langMode = true;
     }
   }
 }
