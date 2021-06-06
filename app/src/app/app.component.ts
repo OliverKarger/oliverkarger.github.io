@@ -11,6 +11,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import {faGitAlt} from '@fortawesome/free-brands-svg-icons';
 import {lang} from '../lang';
+import {CookieService} from 'ngx-cookie';
 
 @Component({
   selector: 'app-root',
@@ -38,6 +39,14 @@ export class AppComponent {
   toggleNavIcon = faToggleOff;
   toggleLangIcon = faFlag;
   langData = lang.de;
+  /**
+   * Creates an instance of AppComponent.
+   * @author Oliver Karger <kmaster@oliver-karger.de>
+   * @date 06/06/2021
+   * @param {CookieService} cookieService
+   * @memberof AppComponent
+   */
+  constructor(private cookieService: CookieService) {}
 
   underConstruction: boolean = true;
   navAlign: boolean = false; // false = left, true = top
@@ -70,6 +79,23 @@ export class AppComponent {
     } else {
       this.langData = lang.de;
       this.langMode = true;
+    }
+  }
+  /**
+   * @description Checks if certain Cookies for settings are set
+   * @author Oliver Karger <kmaster@oliver-karger.de>
+   * @date 06/06/2021
+   * @memberof AppComponent
+   */
+  checkSettingsCookie(): void {
+    const navbarSetting = this.cookieService.get('navbar-setting');
+    if (navbarSetting !== undefined) {
+      this.navAlign = navbarSetting === 'true';
+      this.navToggle();
+      this.cookieService.put(
+        'navbar-setting',
+        (navbarSetting === 'true').toString(),
+      );
     }
   }
 }
