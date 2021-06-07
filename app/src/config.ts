@@ -22,5 +22,5 @@ export const lang = {
 };
 
 export const GoogleAnalytics = {
-  key: 'G-6QSSPZYC4V',
+  key: 'UA-198874871-1',
 };

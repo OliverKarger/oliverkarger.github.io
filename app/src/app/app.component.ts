@@ -1,4 +1,4 @@
-import {Component, ViewChild, ElementRef, OnInit} from '@angular/core';
+import {Component, ViewChild, ElementRef, AfterViewInit} from '@angular/core';
 import {
   faUserCircle,
   faHome,
@@ -18,7 +18,7 @@ import {GoogleAnalyticsService} from '../services/google-analytics.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements AfterViewInit {
   @ViewChild('toggleNavButton', {read: ElementRef, static: false})
   toggleNavButton?: ElementRef;
 
@@ -71,13 +71,16 @@ export class AppComponent implements OnInit {
         `', 'auto');
       `;
       document.head.appendChild(script);
+      console.log('Google Analytics Code Appended!');
     } catch (ex) {
       console.error('Error appending google analytics');
       console.error(ex);
     }
   }
 
-  constructor(private googleAnalyticsService: GoogleAnalyticsService) {
+  constructor(private googleAnalyticsService: GoogleAnalyticsService) {}
+
+  ngAfterViewInit() {
     this.appendGaTrackingCode();
     this.googleAnalyticsService.emitEvent(
       'loadPage',
@@ -86,6 +89,4 @@ export class AppComponent implements OnInit {
       10,
     );
   }
-
-  ngOnInit() {}
 }
