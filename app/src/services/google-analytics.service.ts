@@ -1,47 +1,68 @@
-import {Injectable} from '@angular/core';
+import {DOCUMENT} from '@angular/common';
+import {Inject, Injectable, Renderer2, RendererFactory2} from '@angular/core';
 import {NavigationEnd, Router} from '@angular/router';
-declare let ga: Function;
+import {tap, filter} from 'rxjs/operators';
+import * as config from '../config';
 
-@Injectable({providedIn: 'root'})
+declare let gtag: Function;
+
+@Injectable()
 export class GoogleAnalyticsService {
-  constructor(public router: Router) {
-    this.router.events.subscribe((event) => {
-      try {
-        if (typeof ga === 'function') {
-          if (event instanceof NavigationEnd) {
-            ga('set', 'page', event.urlAfterRedirects);
-            ga('send', 'pageview');
-            console.log('%%% Google Analytics page view event %%%');
-          }
-        }
-      } catch (e) {
-        console.log(e);
-      }
-    });
+  private googleAnalyticsId: string;
+  private renderer2: Renderer2;
+  private scriptsLoaded: boolean = false;
+
+  constructor(
+    private rendererFactory2: RendererFactory2,
+    @Inject(DOCUMENT) private _document: Document,
+    private _router: Router,
+  ) {
+    this.renderer2 = this.rendererFactory2.createRenderer(null, null);
+    this.googleAnalyticsId = config.GoogleAnalytics.token;
   }
 
-  /**
-   * Emit google analytics event
-   * Fire event example:
-   * this.emitEvent("testCategory", "testAction", "testLabel", 10);
-   * @param {string} eventCategory
-   * @param {string} eventAction
-   * @param {string} eventLabel
-   * @param {number} eventValue
-   */
-  public emitEvent(
-    eventCategory: string,
-    eventAction: string,
-    eventLabel: string = '',
-    eventValue: number = 0,
-  ) {
-    if (typeof ga === 'function') {
-      ga('send', 'event', {
-        eventCategory: eventCategory,
-        eventLabel: eventLabel,
-        eventAction: eventAction,
-        eventValue: eventValue,
+  init() {
+    if (!this.scriptsLoaded) {
+      this.insertMainScript();
+    }
+  }
+
+  private insertMainScript() {
+    if (this.googleAnalyticsId) {
+      const script: HTMLScriptElement = this.renderer2.createElement('script');
+      script.type = 'text/javascript';
+      script.onload = this.insertSecondHalfOfScript.bind(this);
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${this.googleAnalyticsId}`;
+      script.text = '';
+      this.renderer2.appendChild(this._document.body, script);
+    }
+  }
+
+  private insertSecondHalfOfScript() {
+    const script: HTMLScriptElement = this.renderer2.createElement('script');
+    script.type = 'text/javascript';
+    script.src = './assets/google-analytics.js';
+    script.text = '';
+    this.renderer2.appendChild(this._document.body, script);
+    script.onload = () => {
+      this.scriptsLoaded = true;
+    };
+  }
+
+  trackSinglePageView(event: NavigationEnd) {
+    if (this.googleAnalyticsId && this.scriptsLoaded) {
+      gtag('config', this.googleAnalyticsId, {
+        page_path: event.urlAfterRedirects,
       });
     }
+  }
+  trackPageViews() {
+    return this._router.events.pipe(
+      filter(() => this.scriptsLoaded === true),
+      filter((evt: any) => evt instanceof NavigationEnd),
+      tap((event: NavigationEnd) => {
+        this.trackSinglePageView(event);
+      }),
+    );
   }
 }
