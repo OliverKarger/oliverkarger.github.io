@@ -20,3 +20,7 @@ export const lang = {
     underConstruction: 'Currently under construction!',
   },
 };
+
+export const GoogleAnalytics = {
+  key: 'G-6QSSPZYC4V',
+};

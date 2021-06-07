@@ -19,11 +19,4 @@ import {HomeComponent} from './home/home.component';
   providers: [],
   bootstrap: [AppComponent],
 })
-/**
- * @description App Class
- * @author Oliver Karger <kmaster@oliver-karger.de>
- * @date 04/06/2021
- * @export
- * @class AppModule
- */
 export class AppModule {}

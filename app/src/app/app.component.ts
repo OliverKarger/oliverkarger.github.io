@@ -1,4 +1,4 @@
-import {Component, ViewChild, ElementRef} from '@angular/core';
+import {Component, ViewChild, ElementRef, OnInit} from '@angular/core';
 import {
   faUserCircle,
   faHome,
@@ -10,22 +10,15 @@ import {
   faFlag,
 } from '@fortawesome/free-solid-svg-icons';
 import {faGitAlt} from '@fortawesome/free-brands-svg-icons';
-import {lang} from '../lang';
-import {CookieService} from 'ngx-cookie';
+import * as config from '../config';
+import {GoogleAnalyticsService} from '../services/google-analytics.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-/**
- * @description Main App Component Class
- * @author Oliver Karger <kmaster@oliver-karger.de>
- * @date 04/06/2021
- * @export
- * @class AppComponent
- */
-export class AppComponent {
+export class AppComponent implements OnInit {
   @ViewChild('toggleNavButton', {read: ElementRef, static: false})
   toggleNavButton?: ElementRef;
 
@@ -38,25 +31,11 @@ export class AppComponent {
   loadingSymbol = faCog;
   toggleNavIcon = faToggleOff;
   toggleLangIcon = faFlag;
-  langData = lang.de;
-  /**
-   * Creates an instance of AppComponent.
-   * @author Oliver Karger <kmaster@oliver-karger.de>
-   * @date 06/06/2021
-   * @param {CookieService} cookieService
-   * @memberof AppComponent
-   */
-  constructor(private cookieService: CookieService) {}
-
+  langData = config.lang.de;
   underConstruction: boolean = true;
   navAlign: boolean = false; // false = left, true = top
   langMode: boolean = false; // false = DE, true = EN
-  /**
-   * @description Toggles Nav Display
-   * @author Oliver Karger <kmaster@oliver-karger.de>
-   * @date 05/06/2021
-   * @memberof AppComponent
-   */
+
   navToggle() {
     if (this.navAlign) {
       this.navAlign = false;
@@ -66,36 +45,41 @@ export class AppComponent {
       this.toggleNavIcon = faToggleOff;
     }
   }
-  /**
-   * @description Switch Language between EN and DE
-   * @author Oliver Karger <kmaster@oliver-karger.de>
-   * @date 05/06/2021
-   * @memberof AppComponent
-   */
+
   langToggle() {
     if (this.langMode) {
-      this.langData = lang.en;
+      this.langData = config.lang.en;
       this.langMode = false;
     } else {
-      this.langData = lang.de;
+      this.langData = config.lang.de;
       this.langMode = true;
     }
   }
-  /**
-   * @description Checks if certain Cookies for settings are set
-   * @author Oliver Karger <kmaster@oliver-karger.de>
-   * @date 06/06/2021
-   * @memberof AppComponent
-   */
-  checkSettingsCookie(): void {
-    const navbarSetting = this.cookieService.get('navbar-setting');
-    if (navbarSetting !== undefined) {
-      this.navAlign = navbarSetting === 'true';
-      this.navToggle();
-      this.cookieService.put(
-        'navbar-setting',
-        (navbarSetting === 'true').toString(),
-      );
+
+  private appendGaTrackingCode() {
+    try {
+      const script = document.createElement('script');
+      script.innerHTML =
+        `
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+       
+        ga('create', '` +
+        config.GoogleAnalytics.key +
+        `', 'auto');
+      `;
+      document.head.appendChild(script);
+    } catch (ex) {
+      console.error('Error appending google analytics');
+      console.error(ex);
     }
   }
+
+  constructor(private googleAnalyticsService: GoogleAnalyticsService) {
+    this.appendGaTrackingCode();
+  }
+
+  ngOnInit() {}
 }
