@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {NavigationEnd, Router} from '@angular/router';
 declare let ga: Function;
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class GoogleAnalyticsService {
   constructor(public router: Router) {
     this.router.events.subscribe((event) => {

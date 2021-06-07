@@ -79,6 +79,12 @@ export class AppComponent implements OnInit {
 
   constructor(private googleAnalyticsService: GoogleAnalyticsService) {
     this.appendGaTrackingCode();
+    this.googleAnalyticsService.emitEvent(
+      'loadPage',
+      'loadPage',
+      'Page loaded',
+      10,
+    );
   }
 
   ngOnInit() {}
