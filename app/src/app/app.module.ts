@@ -6,12 +6,17 @@ import {AppComponent} from './app.component';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {NavbarComponent} from './navbar/navbar.component';
 import {HomeComponent} from './home/home.component';
-import {GoogleAnalyticsService} from '../services/google-analytics.service';
+import {ServicesComponent} from './services/services.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HomeComponent],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    HomeComponent,
+    ServicesComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
-  providers: [GoogleAnalyticsService],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

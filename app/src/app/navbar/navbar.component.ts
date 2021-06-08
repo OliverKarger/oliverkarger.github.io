@@ -11,6 +11,7 @@ import {
   faBlog,
   faIdCard,
   faCog,
+  faGem,
 } from '@fortawesome/free-solid-svg-icons';
 import {faGitAlt} from '@fortawesome/free-brands-svg-icons';
 
@@ -40,6 +41,7 @@ export class NavbarComponent implements OnChanges {
   navBlogIcon = faBlog;
   navContactIcon = faIdCard;
   loadingSymbol = faCog;
+  navServicesSymbol = faGem;
 
   /**
    * Creates an instance of NavbarComponent.

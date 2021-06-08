@@ -1,29 +1,53 @@
-<header class="flex-grid navbar navbar-left glass-container" #navbar>
-  <ul class="flex-grid flex-col navbar-nav">
-    <li class="flex-grid nav-item">
-      <fa-icon [icon]="navHomeIcon" size="2x"></fa-icon>
-      &nbsp;
-      <span>{{ langData.navigation.home }}</span>
+<header class="flex-col navbar navbar-left glass-container" #navbar>
+  <ul class="flex-col navbar-nav">
+    <li class="flex-row nav-item">
+      <div class="flex-row icon">
+        <fa-icon [icon]="navHomeIcon" size="2x"></fa-icon>
+      </div>
+      <div class="flex-row text">
+        <span>{{ langData.navigation.home }}</span>
+      </div>
     </li>
-    <li class="flex-grid nav-item">
-      <fa-icon [icon]="navUserCircleSymbol" size="2x"></fa-icon>
-      &nbsp;
-      <span>{{ langData.navigation.aboutMe }}</span>
+    <li class="flex-row nav-item">
+      <div class="flex-row icon">
+        <fa-icon [icon]="navUserCircleSymbol" size="2x"></fa-icon>
+        &nbsp;
+      </div>
+      <div class="flex-row text">
+        <span>{{ langData.navigation.aboutMe }}</span>
+      </div>
     </li>
-    <li class="flex-grid nav-item">
-      <fa-icon [icon]="navProjectSymbol" size="2x"></fa-icon>
-      &nbsp;
-      <span>{{ langData.navigation.projects }}</span>
+    <li class="flex-row nav-item">
+      <div class="flex-row icon">
+        <fa-icon [icon]="navProjectSymbol" size="2x"></fa-icon>
+      </div>
+      <div class="flex-row text">
+        <span>{{ langData.navigation.projects }}</span>
+      </div>
     </li>
-    <li class="flex-grid nav-item">
-      <fa-icon [icon]="navBlogIcon" size="2x"></fa-icon>
-      &nbsp;
-      <span>{{ langData.navigation.blog }}</span>
+    <li class="flex-row nav-item">
+      <div class="flex-row icon">
+        <fa-icon [icon]="navServicesSymbol" size="2x"></fa-icon>
+      </div>
+      <div class="flex-row text">
+        <span>{{ langData.navigation.services }}</span>
+      </div>
     </li>
-    <li class="flex-grid nav-item">
-      <fa-icon [icon]="navContactIcon" size="2x"></fa-icon>
-      &nbsp;
-      <span>{{ langData.navigation.contact }}</span>
+    <li class="flex-row nav-item">
+      <div class="flex-row icon">
+        <fa-icon [icon]="navBlogIcon" size="2x"></fa-icon>
+      </div>
+      <div class="flex-row text">
+        <span>{{ langData.navigation.blog }}</span>
+      </div>
+    </li>
+    <li class="flex-row nav-item">
+      <div class="flex-row icon">
+        <fa-icon [icon]="navContactIcon" size="2x"></fa-icon>
+      </div>
+      <div class="flex-row text">
+        <span>{{ langData.navigation.contact }}</span>
+      </div>
     </li>
   </ul>
 </header>

@@ -1,15 +1,26 @@
 .navbar {
   .navbar-nav {
     align-items: flex-start;
+    flex-shrink: 1;
     .nav-item {
       margin: 0.7rem;
       cursor: pointer;
       font-weight: 700;
       font-size: 18px;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       vertical-align: middle;
-      display: flex;
+      .icon {
+        height: 45px;
+        width: 50px;
+        align-items: center;
+        justify-content: center;
+      }
+      .text {
+        height: 45px;
+        align-items: center;
+        justify-tracks: center;
+      }
     }
     .nav-item-active {
       backdrop-filter: blur(0);

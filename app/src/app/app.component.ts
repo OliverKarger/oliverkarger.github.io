@@ -1,10 +1,4 @@
-import {
-  Component,
-  ViewChild,
-  ElementRef,
-  OnInit,
-  AfterContentInit,
-} from '@angular/core';
+import {Component, ViewChild, ElementRef} from '@angular/core';
 import {
   faUserCircle,
   faHome,
@@ -17,14 +11,14 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import {faGitAlt} from '@fortawesome/free-brands-svg-icons';
 import * as config from '../config';
-import {GoogleAnalyticsService} from 'src/services/google-analytics.service';
+import {ServicesComponent} from './services/services.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit, AfterContentInit {
+export class AppComponent {
   @ViewChild('toggleNavButton', {read: ElementRef, static: false})
   toggleNavButton?: ElementRef;
 
@@ -60,21 +54,5 @@ export class AppComponent implements OnInit, AfterContentInit {
       this.langData = config.lang.de;
       this.langMode = true;
     }
-  }
-
-  constructor(private _analytics: GoogleAnalyticsService) {}
-
-  ngOnInit() {
-    this._analytics.init();
-    this._analytics.trackPageViews().subscribe();
-    console.log('%%% Google Analytics active! %%%');
-  }
-
-  ngAfterContentInit() {
-    this._analytics.trackSinglePageView({
-      urlAfterRedirects: '/',
-      id: 1,
-      url: 'https://oliverkarger.github.io/',
-    });
   }
 }
