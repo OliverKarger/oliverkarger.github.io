@@ -4,6 +4,7 @@ import {
   ElementRef,
   Input,
   OnChanges,
+  OnInit
 } from '@angular/core';
 import {
   faUserCircle,
@@ -26,9 +27,10 @@ import {faGitAlt} from '@fortawesome/free-brands-svg-icons';
  * @date 05/06/2021
  * @export
  * @class NavbarComponent
+ * @implements {OnChanges}
  * @implements {OnInit}
  */
-export class NavbarComponent implements OnChanges {
+export class NavbarComponent implements OnChanges, OnInit {
   @ViewChild('navbar', {read: ElementRef, static: false})
   navigation?: ElementRef;
 
@@ -57,6 +59,18 @@ export class NavbarComponent implements OnChanges {
    * @memberof NavbarComponent
    */
   ngOnChanges() {
+    if (this.alignTop) {
+      this.navigation?.nativeElement.classList.remove('navbar-top');
+      this.navigation?.nativeElement.classList.add('navbar-left');
+      this.alignTop = true;
+    } else {
+      this.navigation?.nativeElement.classList.remove('navbar-left');
+      this.navigation?.nativeElement.classList.add('navbar-top');
+      this.alignTop = false;
+    }
+  }
+
+  ngOnInit() {
     if (this.alignTop) {
       this.navigation?.nativeElement.classList.remove('navbar-top');
       this.navigation?.nativeElement.classList.add('navbar-left');
