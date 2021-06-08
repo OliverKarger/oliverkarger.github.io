@@ -2,8 +2,8 @@
   <title>{{ title }}</title>
 </head>
 <main class="flex">
-  <navbar [alignTop]="navAlign" [langData]="langData"></navbar>
-  <div class="body flex-grid"><!--
+  <navbar [alignTop]="navAlign" [langData]="langData.navigation"></navbar>
+  <div class="body flex"><!--
     <div
       class="loading-symbol flex-grid flex-col glass-container"
       #loadingContainer
@@ -11,8 +11,13 @@
       <fa-icon [icon]="loadingSymbol" [spin]="true" size="6x"></fa-icon>
       <h1>{{ langData.underConstruction }}</h1>
     </div>-->
-    <div class="app-body">
-      <app-services></app-services>
+    <div class="app-body spa-container">
+      <div class="spa-element" #home>Home</div>
+      <div class="spa-element" #aboutMe>About Me</div>
+      <div class="spa-element" #projects>Projects</div>
+      <app-services [langData]="langData.services" class="spa-element" #services></app-services>
+      <div class="spa-element" #blog>Blog</div>
+      <div class="spa-element" #contact>Contact</div>
     </div>
   </div>
   <div class="page-controls flex glass-container">

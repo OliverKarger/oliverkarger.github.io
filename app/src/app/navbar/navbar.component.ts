@@ -4,7 +4,7 @@ import {
   ElementRef,
   Input,
   OnChanges,
-  OnInit
+  OnInit,
 } from '@angular/core';
 import {
   faUserCircle,

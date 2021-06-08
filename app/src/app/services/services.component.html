@@ -1,5 +1,46 @@
-<div class="flex-grid">
-    <div class="service-container glass-container flex-grid flex-col"><h1>Service 1</h1></div>
-    <div class="service-container glass-container flex-grid flex-col"><h1>Service 1</h1></div>
-    <div class="service-container glass-container flex-grid flex-col"><h1>Service 1</h1></div>
+<div class="flex-block services">
+    <div class="service glass-container flex flex-block">
+        <div class="header flex-block">
+            <h3>{{langData.coding.title}}</h3>
+        </div>
+        <div class="body flex">
+            <div class="picture flex-row">
+                <fa-icon [icon]="codeIcon" size="4x"></fa-icon>
+            </div>
+            <div class="text flex-row">{{langData.coding.body}}</div>
+        </div>
+    </div>
+    <div class="service glass-container flex flex-block">
+        <div class="header">
+            <h3>{{langData.sysadmin.title}}</h3>
+        </div>
+        <div class="body flex">
+            <div class="picture flex-row">
+                <fa-icon [icon]="sysadminIcon" size="4x"></fa-icon>
+            </div>
+            <div class="text flex-row">{{langData.sysadmin.body}}</div>
+        </div>
+    </div>
+    <div class="service glass-container flex flex-block">
+        <div class="header">
+            <h3>{{langData.customWindowsImage.title}}</h3>
+        </div>
+        <div class="body flex">
+            <div class="picture flex-row">
+                <fa-icon [icon]="customWindowsImageIcon" size="4x"></fa-icon>
+            </div>
+            <div class="text flex-row">{{langData.customWindowsImage.body}}</div>
+        </div>
+    </div>
+    <div class="service glass-container flex flex-block">
+        <div class="header">
+            <h3>{{langData.consulting.title}}</h3>
+        </div>
+        <div class="body flex">
+            <div class="picture flex-row">
+                <fa-icon [icon]="consultIcon" size="4x"></fa-icon>
+            </div>
+            <div class="text flex-row">{{langData.consulting.body}}</div>
+        </div>
+    </div>
 </div>
