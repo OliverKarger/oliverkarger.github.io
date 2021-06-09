@@ -11,12 +11,21 @@ import {faWindows} from '@fortawesome/free-brands-svg-icons';
   templateUrl: './services.component.html',
   styleUrls: ['./services.component.scss'],
 })
+/**
+ * @description Services Page
+ * @author Oliver Karger <kmaster@oliver-karger.de>
+ * @date 09/06/2021
+ * @export
+ * @class ServicesComponent
+ */
 export class ServicesComponent {
   @Input() langData: any;
   @Input() toggleBookingsModal!: () => void;
 
+  /** Start: Fontawesome Icons */
   codeIcon = faCode;
   sysadminIcon = faUsersCog;
   customWindowsImageIcon = faWindows;
   consultIcon = faHandshake;
+  /** End: Fontawesome Icons */
 }

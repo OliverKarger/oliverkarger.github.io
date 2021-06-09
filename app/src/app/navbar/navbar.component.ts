@@ -21,16 +21,28 @@ import {faGitAlt} from '@fortawesome/free-brands-svg-icons';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
 })
+/**
+ * @description Navbar
+ * @author Oliver Karger <kmaster@oliver-karger.de>
+ * @date 09/06/2021
+ * @class NavbarComponent
+ * @implements {OnChanges}
+ * @implements {OnInit}
+ */
 export class NavbarComponent implements OnChanges, OnInit {
+  /** Start: HTML References */
   @ViewChild('navbar', {read: ElementRef, static: false})
   navigation?: ElementRef;
+  /** End: HTML References */
 
+  /** Start: Angular Input */
   @Input() alignTop: boolean = false;
   @Input() langData: any;
-
   @Input()
   navClick!: (element: string) => void;
+  /** End: Angular Input */
 
+  /** Start: Fontawesome Icons */
   navUserCircleSymbol = faUserCircle;
   navProjectSymbol = faGitAlt;
   navHomeIcon = faHome;
@@ -38,7 +50,14 @@ export class NavbarComponent implements OnChanges, OnInit {
   navContactIcon = faIdCard;
   loadingSymbol = faCog;
   navServicesSymbol = faGem;
+  /** End: Fontawesome Icons */
 
+  /**
+   * @description Angular's OnChanges Implementation
+   * @author Oliver Karger <kmaster@oliver-karger.de>
+   * @date 09/06/2021
+   * @memberof NavbarComponent
+   */
   ngOnChanges() {
     if (this.alignTop) {
       this.navigation?.nativeElement.classList.remove('navbar-top');
@@ -51,6 +70,12 @@ export class NavbarComponent implements OnChanges, OnInit {
     }
   }
 
+  /**
+   * @description Angular's OnInit Implementation
+   * @author Oliver Karger <kmaster@oliver-karger.de>
+   * @date 09/06/2021
+   * @memberof NavbarComponent
+   */
   ngOnInit() {
     if (this.alignTop) {
       this.navigation?.nativeElement.classList.remove('navbar-top');

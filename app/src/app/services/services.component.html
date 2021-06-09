@@ -7,7 +7,7 @@
             <div class="picture flex-row">
                 <fa-icon [icon]="codeIcon" size="4x"></fa-icon>
             </div>
-            <div class="text flex-row">{{langData.coding.body}}</div>
+            <div class="text flex-row"><p>{{langData.coding.body}}</p></div>
         </div>
     </div>
     <div class="service glass-container flex flex-block">
@@ -18,7 +18,7 @@
             <div class="picture flex-row">
                 <fa-icon [icon]="sysadminIcon" size="4x"></fa-icon>
             </div>
-            <div class="text flex-row">{{langData.sysadmin.body}}</div>
+            <div class="text flex-row"><p>{{langData.sysadmin.body}}</p></div>
         </div>
     </div>
     <div class="service glass-container flex flex-block">
@@ -29,7 +29,7 @@
             <div class="picture flex-row">
                 <fa-icon [icon]="customWindowsImageIcon" size="4x"></fa-icon>
             </div>
-            <div class="text flex-row">{{langData.customWindowsImage.body}}</div>
+            <div class="text flex-row"><p>{{langData.customWindowsImage.body}}</p></div>
         </div>
     </div>
     <div class="service glass-container flex flex-block">
@@ -41,8 +41,8 @@
                 <fa-icon [icon]="consultIcon" size="4x"></fa-icon>
             </div>
             <div class="text flex-row">
-                {{langData.consulting.body}} <br/>
-                Buchen Sie jetzt einen Termin: <span class="link" (click)="this.toggleBookingsModal()">Microsoft Bookings</span>
+                <p>{{langData.consulting.body}}</p>
+                Buchen Sie jetzt einen Termin: &nbsp;<span class="link" (click)="this.toggleBookingsModal()">Microsoft Bookings</span>
             </div>
         </div>
     </div>

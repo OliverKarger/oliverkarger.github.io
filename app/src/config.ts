@@ -15,7 +15,7 @@ export const lang = {
         body: 'Entwicklung von auf Anforderung zugeschnittenen Anwendungen im Bereich Web, Desktop und Mobile. Einsatz von aktuellen Technologien wie React, ReactNative, Angular, Vue.js, jQuery.js sowie Designframeworks wie Bootstrap und Material-Design-for-Bootstrap',
       },
       sysadmin: {
-        title: 'Systeadministration',
+        title: 'Systemadministration',
         body: 'Installation und Wartung von digitaler Infrastruktur mit bereits etablierten automatisierten Systemen oder mit eigens für Sie entwickelten Lösungen für Windows Server, Ubuntu Server, CentOS, NGINX, Microsoft SQL Server sowie FortiGate und Sophos',
       },
       customWindowsImage: {
