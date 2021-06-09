@@ -31,7 +31,14 @@ main {
   }
 }
 
-.spa-container {
+.app-body {
+  margin-top: 1rem;
+}
+.app-body-alt {
+  margin-top: 5rem;
+}
+
+#spa-container {
   .spa-element {
     display: none;
   }

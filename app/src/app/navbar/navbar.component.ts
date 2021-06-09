@@ -5,7 +5,6 @@ import {
   Input,
   OnChanges,
   OnInit,
-  Output,
 } from '@angular/core';
 import {
   faUserCircle,
@@ -22,15 +21,6 @@ import {faGitAlt} from '@fortawesome/free-brands-svg-icons';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
 })
-/**
- * @description Navbar Component
- * @author Oliver Karger <kmaster@oliver-karger.de>
- * @date 05/06/2021
- * @export
- * @class NavbarComponent
- * @implements {OnChanges}
- * @implements {OnInit}
- */
 export class NavbarComponent implements OnChanges, OnInit {
   @ViewChild('navbar', {read: ElementRef, static: false})
   navigation?: ElementRef;
@@ -49,19 +39,6 @@ export class NavbarComponent implements OnChanges, OnInit {
   loadingSymbol = faCog;
   navServicesSymbol = faGem;
 
-  /**
-   * Creates an instance of NavbarComponent.
-   * @author Oliver Karger <kmaster@oliver-karger.de>
-   * @date 05/06/2021
-   * @memberof NavbarComponent
-   */
-  constructor() {}
-  /**
-   * @description Gets toggled on Component Change
-   * @author Oliver Karger <kmaster@oliver-karger.de>
-   * @date 05/06/2021
-   * @memberof NavbarComponent
-   */
   ngOnChanges() {
     if (this.alignTop) {
       this.navigation?.nativeElement.classList.remove('navbar-top');
@@ -84,9 +61,5 @@ export class NavbarComponent implements OnChanges, OnInit {
       this.navigation?.nativeElement.classList.add('navbar-top');
       this.alignTop = false;
     }
-  }
-
-  click() {
-    this.navClick('fuck ya');
   }
 }

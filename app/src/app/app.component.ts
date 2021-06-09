@@ -39,11 +39,18 @@ export class AppComponent {
   /** End: Data */
 
   navToggle() {
+    const appBodyContainer = document.getElementById('spa-container');
     if (this.navAlign) {
+      // Align Left
       this.navAlign = false;
+      appBodyContainer?.classList.remove('app-body');
+      appBodyContainer?.classList.add('app-body-alt');
       this.toggleNavIcon = faToggleOn;
     } else if (!this.navAlign) {
+      // Align Top
       this.navAlign = true;
+      appBodyContainer?.classList.remove('app-body-alt');
+      appBodyContainer?.classList.add('app-body');
       this.toggleNavIcon = faToggleOff;
     }
   }

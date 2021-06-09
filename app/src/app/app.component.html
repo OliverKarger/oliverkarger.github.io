@@ -3,19 +3,12 @@
 </head>
 <main class="flex">
   <navbar [alignTop]="navAlign" [langData]="langData.navigation" [navClick]="navClick"></navbar>
-  <div class="body flex"><!--
-    <div
-      class="loading-symbol flex-grid flex-col glass-container"
-      #loadingContainer
-    >
-      <fa-icon [icon]="loadingSymbol" [spin]="true" size="6x"></fa-icon>
-      <h1>{{ langData.underConstruction }}</h1>
-    </div>-->
-    <div class="app-body spa-container">
-      <div class="spa-element" id="home">Home</div>
+  <div class="body flex">
+    <div class="app-body" id="spa-container">
+      <app-home class="spa-element spa-element-active" id="home" [langData]="langData.home"></app-home>
       <div class="spa-element" id="aboutMe">About Me</div>
       <div class="spa-element" id="projects">Projects</div>
-      <app-services [langData]="langData.services" class="spa-element spa-element-active" id="services" ></app-services>
+      <app-services [langData]="langData.services" class="spa-element" id="services" ></app-services>
       <div class="spa-element" id="blog" >Blog</div>
       <div class="spa-element" id="contact" >Contact</div>
     </div>

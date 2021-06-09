@@ -27,6 +27,9 @@ export const lang = {
         body: 'in aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in pellentesque massa placerat duis ultricies lacus sed turpis tincidunt id aliquet risus feugiat in ante metus dictum at tempor commodo ullamcorper a lacus vestibulum sed arcu non odio euismod lacinia at quis risus sed vulputate odio ut enim',
       },
     },
+    home: {
+      welcome: 'Willkommen!',
+    },
   },
   en: {
     navigation: {
@@ -56,9 +59,8 @@ export const lang = {
         body: 'in aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in pellentesque massa placerat duis ultricies lacus sed turpis tincidunt id aliquet risus feugiat in ante metus dictum at tempor commodo ullamcorper a lacus vestibulum sed arcu non odio euismod lacinia at quis risus sed vulputate odio ut enim',
       },
     },
+    home: {
+      welcome: 'Welcome!',
+    },
   },
-};
-
-export const GoogleAnalytics = {
-  token: 'G-95WWDSRMEJ',
 };
