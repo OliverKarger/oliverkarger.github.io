@@ -1,23 +1,13 @@
 .modal {
   position: fixed;
   z-index: 1; 
-  left: 0;
-  top: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 75%;
   height: 75%;
   overflow: hidden; 
   justify-self: center;
   justify-content: center;
-  .modal-body{
-    height: 90%;
-    width: 100%;
-    margin: 1rem;
-    padding: 0;
-  }
-  .modal-footer{
-      text-align: right;
-      width: 80%;
-      padding: 0.5rem;
-      min-height: 2rem;
-  }
+  padding: 1rem;
 }
