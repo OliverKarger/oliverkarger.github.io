@@ -1,11 +1,13 @@
 <header class="navbar navbar-left glass-container" #navbar>
   <ul class="navbar-nav">
     <li class="nav-item">
-      <div class="flex-row icon">
-        <fa-icon [icon]="navHomeIcon" size="2x"></fa-icon>
-      </div>
-      <div class="flex-row text">
-        <span (click)="this.navClick('home')">{{ langData.home }}</span>
+      <div class="flex-row" ng-click="this.navClick('home')">
+        <div class="flex-row icon">
+          <fa-icon [icon]="navHomeIcon" size="2x"></fa-icon>
+        </div>
+        <div class="flex-row text">
+          <span>{{ langData.home }}</span>
+        </div>
       </div>
     </li>
     <li class="nav-item">
