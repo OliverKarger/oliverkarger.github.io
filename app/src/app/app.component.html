@@ -2,15 +2,28 @@
   <title>{{ title }}</title>
 </head>
 <main class="flex" id="main-body">
-  <navbar [alignTop]="navAlign" [langData]="langData.navigation" [navClick]="navClick"></navbar>
+  <navbar
+    [alignTop]="navAlign"
+    [langData]="langData.navigation"
+    [navClick]="navClick"
+  ></navbar>
   <div class="body flex">
     <div class="app-body" id="spa-container">
-      <app-home class="spa-element spa-element-active" id="home" [langData]="langData.home"></app-home>
+      <app-home
+        class="spa-element spa-element-active"
+        id="home"
+        [langData]="langData.home"
+      ></app-home>
       <div class="spa-element" id="aboutMe">About Me</div>
       <div class="spa-element" id="projects">Projects</div>
-      <app-services [langData]="langData.services" class="spa-element" id="services" [toggleBookingsModal]="toggleBookingsModal" ></app-services>
-      <div class="spa-element" id="blog" >Blog</div>
-      <div class="spa-element" id="contact" >Contact</div>
+      <app-services
+        [langData]="langData.services"
+        class="spa-element"
+        id="services"
+        [toggleBookingsModal]="toggleBookingsModal"
+      ></app-services>
+      <div class="spa-element" id="blog">Blog</div>
+      <div class="spa-element" id="contact">Contact</div>
     </div>
   </div>
   <div class="page-controls flex glass-container">
@@ -25,5 +38,7 @@
       </a>
     </div>
   </div>
-  <app-bookings-modal [toggleModal]="this.toggleBookingsModal"></app-bookings-modal>
 </main>
+<app-bookings-modal
+  [toggleModal]="this.toggleBookingsModal"
+></app-bookings-modal>

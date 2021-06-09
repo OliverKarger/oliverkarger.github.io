@@ -1,23 +1,30 @@
 .service {
-    padding: 0.5rem;
-    margin: 0.5rem;
-    margin-top: 0;
-    max-width: 1000px;
-    .header {
-        text-align: left;
-        border-bottom: 1px solid #fafafa;
-        margin-bottom: 1rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  margin-top: 0;
+  max-width: 1600px;
+  // width: 70%;
+  .header {
+    text-align: left;
+    border-bottom: 1px solid #fafafa;
+    margin-bottom: 1rem;
+  }
+  .body {
+    .text {
+      flex-wrap: wrap;
+      text-align: justify;
     }
-    .body {
-        .text {
-            flex-wrap: wrap;
-            text-align: justify;
-        }
-        .picture fa-icon {
-            width: 75px;
-            height: 75px;
-            align-items: center;
-            margin-right: 1rem;
-        }
+    .picture fa-icon {
+      width: 75px;
+      height: 75px;
+      align-items: center;
+      margin-right: 1rem;
     }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .picture fa-icon {
+    display: none;
+  }
 }

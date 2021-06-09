@@ -1,5 +1,14 @@
 <div class="modal hidden glass-container" id="bookings-modal">
-  <!--<span>Schließen mit ESC</span>-->
-  <iframe src='https://outlook.office365.com/owa/calendar/OliverKarger1@oliver-karger.de/bookings/' width='100%'
-        height='100%' scrolling='yes' style='border:0'></iframe>
+  <div class="modal-close">
+    <span class="link" (click)="this.toggleModal()">
+      <fa-icon [icon]="closeModalIcon" size="2x"></fa-icon>
+    </span>
+  </div>
+  <div class="modal-body">
+    <iframe
+      src="https://outlook.office365.com/owa/calendar/OliverKarger1@oliver-karger.de/bookings/"
+      scrolling="yes"
+      style="border: 0"
+    ></iframe>
+  </div>
 </div>

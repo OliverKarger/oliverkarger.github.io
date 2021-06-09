@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {faWindowClose} from '@fortawesome/free-regular-svg-icons';
 
 @Component({
   selector: 'app-bookings-modal',
@@ -16,4 +17,8 @@ export class BookingsModalComponent {
   /** Start: Angular Input */
   @Input() toggleModal!: () => void;
   /** End: Angular Input */
+
+  /** Start: Fontawesome Icons */
+  closeModalIcon = faWindowClose;
+  /** End: Fontawesome Icons */
 }
