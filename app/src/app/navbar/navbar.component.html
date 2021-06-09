@@ -5,7 +5,7 @@
         <fa-icon [icon]="navHomeIcon" size="2x"></fa-icon>
       </div>
       <div class="flex-row text">
-        <span>{{ langData.home }}</span>
+        <span (click)="this.navClick('home')">{{ langData.home }}</span>
       </div>
     </li>
     <li class="nav-item">
@@ -14,7 +14,7 @@
         &nbsp;
       </div>
       <div class="flex-row text">
-        <span>{{ langData.aboutMe }}</span>
+        <span (click)="this.navClick('aboutMe')">{{ langData.aboutMe }}</span>
       </div>
     </li>
     <li class="nav-item">
@@ -22,7 +22,7 @@
         <fa-icon [icon]="navProjectSymbol" size="2x"></fa-icon>
       </div>
       <div class="flex-row text">
-        <span>{{ langData.projects }}</span>
+        <span (click)="this.navClick('projects')">{{ langData.projects }}</span>
       </div>
     </li>
     <li class="nav-item">
@@ -30,7 +30,7 @@
         <fa-icon [icon]="navServicesSymbol" size="2x"></fa-icon>
       </div>
       <div class="flex-row text">
-        <span>{{ langData.services }}</span>
+        <span (click)="this.navClick('services')">{{ langData.services }}</span>
       </div>
     </li>
     <li class="nav-item">
@@ -38,7 +38,7 @@
         <fa-icon [icon]="navBlogIcon" size="2x"></fa-icon>
       </div>
       <div class="flex-row text">
-        <span>{{ langData.blog }}</span>
+        <span (click)="this.navClick('blog')">{{ langData.blog }}</span>
       </div>
     </li>
     <li class="nav-item">
@@ -46,7 +46,7 @@
         <fa-icon [icon]="navContactIcon" size="2x"></fa-icon>
       </div>
       <div class="flex-row text">
-        <span>{{ langData.contact }}</span>
+        <span (click)="this.navClick('contact')">{{ langData.contact }}</span>
       </div>
     </li>
   </ul>

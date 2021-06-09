@@ -2,7 +2,7 @@
   <title>{{ title }}</title>
 </head>
 <main class="flex">
-  <navbar [alignTop]="navAlign" [langData]="langData.navigation"></navbar>
+  <navbar [alignTop]="navAlign" [langData]="langData.navigation" [navClick]="navClick"></navbar>
   <div class="body flex"><!--
     <div
       class="loading-symbol flex-grid flex-col glass-container"
@@ -12,12 +12,12 @@
       <h1>{{ langData.underConstruction }}</h1>
     </div>-->
     <div class="app-body spa-container">
-      <div class="spa-element" #home>Home</div>
-      <div class="spa-element" #aboutMe>About Me</div>
-      <div class="spa-element" #projects>Projects</div>
-      <app-services [langData]="langData.services" class="spa-element" #services></app-services>
-      <div class="spa-element" #blog>Blog</div>
-      <div class="spa-element" #contact>Contact</div>
+      <div class="spa-element" id="home">Home</div>
+      <div class="spa-element" id="aboutMe">About Me</div>
+      <div class="spa-element" id="projects">Projects</div>
+      <app-services [langData]="langData.services" class="spa-element spa-element-active" id="services" ></app-services>
+      <div class="spa-element" id="blog" >Blog</div>
+      <div class="spa-element" id="contact" >Contact</div>
     </div>
   </div>
   <div class="page-controls flex glass-container">

@@ -1,4 +1,4 @@
-import {Component, ViewChild, ElementRef} from '@angular/core';
+import {Component} from '@angular/core';
 import {
   faUserCircle,
   faHome,
@@ -18,24 +18,6 @@ import * as config from '../config';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  @ViewChild('toggleNavButton', {read: ElementRef, static: false})
-  toggleNavButton?: ElementRef;
-
-  /** Start: SPA Childs */
-  @ViewChild('home', {read: ElementRef, static: false})
-  pHome?: ElementRef;
-  @ViewChild('aboutMe', {read: ElementRef, static: false})
-  pAboutMe?: ElementRef;
-  @ViewChild('projects', {read: ElementRef, static: false})
-  pProjects?: ElementRef;
-  @ViewChild('services', {read: ElementRef, static: false})
-  pServices?: ElementRef;
-  @ViewChild('blog', {read: ElementRef, static: false})
-  pBlog?: ElementRef;
-  @ViewChild('contact', {read: ElementRef, static: false})
-  pContact?: ElementRef;
-  /** End: SPA Childs */
-
   title = 'Oliver Karger';
 
   /** Start: Nav / Toggle Symbols */
@@ -77,58 +59,16 @@ export class AppComponent {
   }
 
   /** Start: Single-Page-Application-Navigation */
-  currentSelectedItem: SelectableNavItem = 'aboutMe';
-  navClick(element: SelectableNavItem) {
-    // Hide current SPA Page
-    switch (element) {
-      case 'home':
-        this.pHome?.nativeElement.classList.remove('spa-element-active');
-        break;
-      case 'aboutMe':
-        this.pAboutMe?.nativeElement.classList.remove('spa-element-active');
-        break;
-      case 'projects':
-        this.pProjects?.nativeElement.classList.remove('spa-element-active');
-        break;
-      case 'services':
-        this.pServices?.nativeElement.classList.remove('spa-element-active');
-        break;
-      case 'blog':
-        this.pBlog?.nativeElement.classList.remove('spa-element-active');
-        break;
-      case 'contact':
-        this.pContact?.nativeElement.classList.remove('spa-element-active');
-        break;
+  currentSelectedItem: string = 'aboutMe';
+  navClick(element: string) {
+    // Hide old Element
+    const oldElements = document.getElementsByClassName('spa-element-active');
+    for (let itr = 0; itr < oldElements.length; itr++) {
+      oldElements[itr].classList.remove('spa-element-active');
     }
-    // Show new SPA Page
-    switch (element) {
-      case 'home':
-        this.pHome?.nativeElement.classList.add('spa-element-active');
-        break;
-      case 'aboutMe':
-        this.pAboutMe?.nativeElement.classList.add('spa-element-active');
-        break;
-      case 'projects':
-        this.pProjects?.nativeElement.classList.add('spa-element-active');
-        break;
-      case 'services':
-        this.pServices?.nativeElement.classList.add('spa-element-active');
-        break;
-      case 'blog':
-        this.pBlog?.nativeElement.classList.add('spa-element-active');
-        break;
-      case 'contact':
-        this.pContact?.nativeElement.classList.add('spa-element-active');
-        break;
-    }
+    // Display new Elemenet
+    const newElement = document.getElementById(element);
+    newElement?.classList.add('spa-element-active');
   }
   /** End: Single-Page-Application-Navigation */
 }
-
-type SelectableNavItem =
-  | 'home'
-  | 'aboutMe'
-  | 'projects'
-  | 'services'
-  | 'blog'
-  | 'contact';

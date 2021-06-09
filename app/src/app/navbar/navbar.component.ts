@@ -5,6 +5,7 @@ import {
   Input,
   OnChanges,
   OnInit,
+  Output,
 } from '@angular/core';
 import {
   faUserCircle,
@@ -36,6 +37,9 @@ export class NavbarComponent implements OnChanges, OnInit {
 
   @Input() alignTop: boolean = false;
   @Input() langData: any;
+
+  @Input()
+  navClick!: (element: string) => void;
 
   navUserCircleSymbol = faUserCircle;
   navProjectSymbol = faGitAlt;
@@ -80,5 +84,9 @@ export class NavbarComponent implements OnChanges, OnInit {
       this.navigation?.nativeElement.classList.add('navbar-top');
       this.alignTop = false;
     }
+  }
+
+  click() {
+    this.navClick('fuck ya');
   }
 }
