@@ -13,6 +13,7 @@ import {faWindows} from '@fortawesome/free-brands-svg-icons';
 })
 export class ServicesComponent {
   @Input() langData: any;
+  @Input() toggleBookingsModal!: () => void;
 
   codeIcon = faCode;
   sysadminIcon = faUsersCog;

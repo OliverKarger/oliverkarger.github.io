@@ -7,6 +7,7 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {NavbarComponent} from './navbar/navbar.component';
 import {HomeComponent} from './home/home.component';
 import {ServicesComponent} from './services/services.component';
+import {BookingsModalComponent} from './bookings-modal/bookings-modal.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import {ServicesComponent} from './services/services.component';
     NavbarComponent,
     HomeComponent,
     ServicesComponent,
+    BookingsModalComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
   providers: [],

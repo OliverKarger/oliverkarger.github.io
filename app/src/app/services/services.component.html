@@ -40,7 +40,10 @@
             <div class="picture flex-row">
                 <fa-icon [icon]="consultIcon" size="4x"></fa-icon>
             </div>
-            <div class="text flex-row">{{langData.consulting.body}}</div>
+            <div class="text flex-row">
+                {{langData.consulting.body}} <br/>
+                Buchen Sie jetzt einen Termin: <span class="link" (click)="this.toggleBookingsModal()">Microsoft Bookings</span>
+            </div>
         </div>
     </div>
 </div>

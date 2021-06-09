@@ -36,6 +36,7 @@ export class AppComponent {
   underConstruction: boolean = true;
   navAlign: boolean = false; // false = left, true = top
   langMode: boolean = false; // false = DE, true = EN
+  bookingsModal: boolean = false;
   /** End: Data */
 
   navToggle() {
@@ -78,4 +79,24 @@ export class AppComponent {
     newElement?.classList.add('spa-element-active');
   }
   /** End: Single-Page-Application-Navigation */
+
+  /** Start: Bookings Modal */
+  toggleBookingsModal = () => {
+    const modal = document.getElementById('bookings-modal');
+    if (this.bookingsModal) {
+      modal?.classList.add('hidden');
+      this.bookingsModal = !this.bookingsModal;
+      document.removeEventListener('keyup', (e) => {});
+    } else {
+      modal?.classList.remove('hidden');
+      this.bookingsModal = !this.bookingsModal;
+      document.addEventListener('keyup', (e) => {
+        if (e.keyCode === 27) {
+          modal?.classList.add('hidden');
+          this.bookingsModal = !this.bookingsModal;
+        }
+      });
+    }
+  };
+  /** End: Bookings Modal */
 }

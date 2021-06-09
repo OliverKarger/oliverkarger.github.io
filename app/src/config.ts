@@ -12,19 +12,19 @@ export const lang = {
     services: {
       coding: {
         title: 'Entwicklung',
-        body: 'in aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in pellentesque massa placerat duis ultricies lacus sed turpis tincidunt id aliquet risus feugiat in ante metus dictum at tempor commodo ullamcorper a lacus vestibulum sed arcu non odio euismod lacinia at quis risus sed vulputate odio ut enim',
+        body: 'Entwicklung von auf Anforderung zugeschnittenen Anwendungen im Bereich Web, Desktop und Mobile. Einsatz von aktuellen Technologien wie React, ReactNative, Angular, Vue.js, jQuery.js sowie Designframeworks wie Bootstrap und Material-Design-for-Bootstrap',
       },
       sysadmin: {
         title: 'Systeadministration',
-        body: 'in aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in pellentesque massa placerat duis ultricies lacus sed turpis tincidunt id aliquet risus feugiat in ante metus dictum at tempor commodo ullamcorper a lacus vestibulum sed arcu non odio euismod lacinia at quis risus sed vulputate odio ut enim',
+        body: 'Installation und Wartung von digitaler Infrastruktur mit bereits etablierten automatisierten Systemen oder mit eigens für Sie entwickelten Lösungen für Windows Server, Ubuntu Server, CentOS, NGINX, Microsoft SQL Server sowie FortiGate und Sophos',
       },
       customWindowsImage: {
         title: 'Einzigartige Windows Versionen',
-        body: 'in aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in pellentesque massa placerat duis ultricies lacus sed turpis tincidunt id aliquet risus feugiat in ante metus dictum at tempor commodo ullamcorper a lacus vestibulum sed arcu non odio euismod lacinia at quis risus sed vulputate odio ut enim',
+        body: 'Speziell auf Ihre Anforderungen zugeschnittene Windows Versionen, komplett vorkonfiguriert mit Ihren Anwendung bereits installiert. Inkl. integration in Windows Server AD und Azure AD',
       },
       consulting: {
         title: 'Beratung',
-        body: 'in aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in pellentesque massa placerat duis ultricies lacus sed turpis tincidunt id aliquet risus feugiat in ante metus dictum at tempor commodo ullamcorper a lacus vestibulum sed arcu non odio euismod lacinia at quis risus sed vulputate odio ut enim',
+        body: 'Sie wissen nicht genau was Sie für Ihr Unternehmen benötigen? Gerne helfe ich Ihnen in einem persönlichen Beratungsgespräch telefonisch, per Videokonferenz oder Vor-Ort.',
       },
     },
     home: {
