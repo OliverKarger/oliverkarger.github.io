@@ -1,0 +1,20 @@
+<div class="navbar d-flex d-flex-inline">
+  <span class="nav-branding d-flex-inline">Oliver Karger</span>
+  <div class="navbar-nav d-flex-inline">
+    <div class="nav-item d-flex d-flex-inline" (click)="this.callback('aboutMe')">
+      <span>About Me</span>
+    </div>
+    <div class="nav-item d-flex d-flex-inline" (click)="this.callback('projects')">
+      <span>Projects</span>
+    </div>
+    <div class="nav-item d-flex d-flex-inline" (click)="this.callback('services')">
+      <span>Services</span>
+    </div>
+    <div class="nav-item d-flex d-flex-inline" (click)="this.callback('contact')">
+      <span>Contact</span>
+    </div>
+  </div>
+  <span class="navbar-toggle d-flex d-flex-inline hidden" (click)="this.clickToggle()">
+    <fa-icon [icon]="this.navToggleIcon" size="2x"></fa-icon>
+  </span>
+</div>

@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans');
+
+// * Fonts - START
+@mixin font-fira-sans {
+    font-family: 'Fira Sans', sans-serif;
+}
+// * Fonts - END
+
+// * Animations / Transitions - START
+@mixin transition-default {
+    transition: all 0.3s ease-out;
+}
+// * Animations / Transitions - END
+
+// * HORIZON Colors - START
+$default-background: rgba(21, 26, 41, 1);
+$hcl-lavender: #b877db;
+$hcl-cranberry: #e95678;
+$hcl-turquoise: #25b0bc;
+$hcl-apricot: #f09483;
+$hcl-rosebud: #fab795;
+$hcl-tacao: #fac29a;
+$hcl-grey: #bbbbbb;
+$hcl-green: #09f7a0;
+// * HORIZON Colors - END
+
+// * Theme 1 - START
+@mixin theme-1 {
+    background-color: $default-background;
+    color: $hcl-apricot;
+}
+@mixin theme-1-boxshadow-out {
+    box-shadow: 0px 0px 15px 0px $hcl-apricot;
+}
+@mixin theme-1-boxshadow-in {
+    box-shadow: inset 0px 0px 15px 0px $hcl-apricot;
+}
+@mixin theme-1-textshadow {
+    text-shadow: 0px 0px 6px $hcl-apricot;
+}
+@mixin theme-1-border {
+    border: 1px solid $hcl-apricot;
+}
+// * Theme 1 - END
+// * Theme 1 Inverted - START
+@mixin theme-1-inverted {
+    background-color: $hcl-apricot;
+    color: $default-background;
+}
+@mixin theme-1-inverted-boxshadow-out {
+    box-shadow: 0px 0px 15px 0px $default-background;
+}
+@mixin theme-1-inverted-boxshadow-in {
+    box-shadow: inset 0px 0px 15px 0px $default-background;
+}
+@mixin theme-1-inverted-textshadow {
+    text-shadow: 0px 0px 6px $default-background;
+}
+@mixin theme-1-inverted-border {
+    border: 1px solid $default-background;
+}
+// * Theme 1 Inverted - END
+
+// * Theme 2 - START
+@mixin theme-2 {
+    background-color: $default-background;
+    color: $hcl-cranberry;
+}
+@mixin theme-2-boxshadow-out {
+    box-shadow: 0px 0px 15px 0px $hcl-cranberry;
+}
+@mixin theme-2-boxshadow-in {
+    box-shadow: inset 0px 0px 15px 0px $hcl-cranberry;
+}
+@mixin theme-2-textshadow {
+    text-shadow: 0px 0px 6px $hcl-cranberry;
+}
+@mixin theme-2-border {
+    border: 1px solid $hcl-cranberry;
+}
+// * Theme 2 - END
+// * Theme 2 Inverted - START
+@mixin theme-2-inverted {
+    background-color: $hcl-cranberry;
+    color: $default-background;
+}
+@mixin theme-2-inverted-boxshadow-out {
+    box-shadow: 0px 0px 15px 0px $default-background;
+}
+@mixin theme-2-inverted-boxshadow-in {
+    box-shadow: inset 0px 0px 15px 0px $default-background;
+}
+@mixin theme-2-inverted-textshadow {
+    text-shadow: 0px 0px 6px $default-background;
+}
+@mixin theme-2-inverted-border {
+    border: 1px solid $default-background;
+}
+// * Theme 2 Inverted - END
+
+// * Theme 3 - START
+@mixin theme-3 {
+    background-color: $default-background;
+    color: $hcl-turquoise;
+}
+@mixin theme-3-boxshadow-out {
+    box-shadow: 0px 0px 15px 0px $hcl-turquoise;
+}
+@mixin theme-3-boxshadow-in {
+    box-shadow: inset 0px 0px 15px 0px $hcl-turquoise;
+}
+@mixin theme-3-textshadow {
+    text-shadow: 0px 0px 6px $hcl-turquoise;
+}
+@mixin theme-3-border {
+    border: 1px solid $hcl-turquoise;
+}
+// * Theme 3 - END
+// * Theme 3 Inverted - START
+@mixin theme-3-inverted {
+    background-color: $hcl-turquoise;
+    color: $default-background;
+}
+@mixin theme-3-inverted-boxshadow-out {
+    box-shadow: 0px 0px 15px 0px $default-background;
+}
+@mixin theme-3-inverted-boxshadow-in {
+    box-shadow: inset 0px 0px 15px 0px $default-background;
+}
+@mixin theme-3-inverted-textshadow {
+    text-shadow: 0px 0px 6px $default-background;
+}
+@mixin theme-3-inverted-border {
+    border: 1px solid $default-background;
+}
+// * Theme 3 Inverted - END
+
+// * Theme 4 - START
+@mixin theme-4 {
+    background-color: $default-background;
+    color: $hcl-lavender;
+}
+@mixin theme-4-boxshadow-out {
+    box-shadow: 0px 0px 15px 0px $hcl-lavender;
+}
+@mixin theme-4-boxshadow-in {
+    box-shadow: inset 0px 0px 15px 0px $hcl-lavender;
+}
+@mixin theme-4-textshadow {
+    text-shadow: 0px 0px 6px $hcl-lavender;
+}
+@mixin theme-4-border {
+    border: 1px solid $hcl-lavender;
+}
+// * Theme 4 - END
+// * Theme 4 Inverted - START
+@mixin theme-4-inverted {
+    background-color: $hcl-lavender;
+    color: $default-background;
+}
+@mixin theme-4-inverted-boxshadow-out {
+    box-shadow: 0px 0px 15px 0px $default-background;
+}
+@mixin theme-4-inverted-boxshadow-in {
+    box-shadow: inset 0px 0px 15px 0px $default-background;
+}
+@mixin theme-4-inverted-textshadow {
+    text-shadow: 0px 0px 6px $default-background;
+}
+@mixin theme-4-inverted-border {
+    border: 1px solid $default-background;
+}
+// * Theme 4 Inverted - END
+
+// * Theme 5 - START
+@mixin theme-5 {
+    background-color: $default-background;
+    color: $hcl-green;
+}
+@mixin theme-5-boxshadow-out {
+    box-shadow: 0px 0px 15px 0px $hcl-green;
+}
+@mixin theme-5-boxshadow-in {
+    box-shadow: inset 0px 0px 15px 0px $hcl-green;
+}
+@mixin theme-5-textshadow {
+    text-shadow: 0px 0px 6px $hcl-green;
+}
+@mixin theme-5-border {
+    border: 1px solid $hcl-green;
+}
+// * Theme 5 - END
+// * Theme 5 Inverted - START
+@mixin theme-5-inverted {
+    background-color: $hcl-green;
+    color: $default-background;
+}
+@mixin theme-5-inverted-boxshadow-out {
+    box-shadow: 0px 0px 15px 0px $default-background;
+}
+@mixin theme-5-inverted-boxshadow-in {
+    box-shadow: inset 0px 0px 15px 0px $default-background;
+}
+@mixin theme-5-inverted-textshadow {
+    text-shadow: 0px 0px 6px $default-background;
+}
+@mixin theme-5-inverted-border {
+    border: 1px solid $default-background;
+}
+// * Theme 5 Inverted - END

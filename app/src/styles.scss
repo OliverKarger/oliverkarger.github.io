@@ -1,0 +1,38 @@
+/** Start: Imports */ 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
+/** End: Imports */ 
+
+/** Start: Global Styles */
+.d-flex {
+    display: flex;
+}
+.d-flex-inline {
+    display: inline-flex;
+    flex-direction: row;
+}
+.d-flex-block {
+    flex-direction: column;
+}
+.hidden {
+    display: none;
+}
+/** End: Global Styles */ 
+
+/** Body */
+:root {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Open Sans', sans-serif;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        display: flex;
+        background-color: rgb(7, 9, 15);
+        color: #fafafa;
+    }
+}
