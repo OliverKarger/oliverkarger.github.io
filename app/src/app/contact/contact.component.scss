@@ -1,0 +1,11 @@
+/** Start: Imports */
+@import "../../celestial-ui.scss";
+/** End: Imports */
+
+.contact {
+    border-radius: 10px;
+    @include theme-2-border();
+    @include theme-2-boxshadow-out();
+    width: 100%;
+    height: 100%;
+}

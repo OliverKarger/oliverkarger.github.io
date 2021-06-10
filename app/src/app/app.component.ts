@@ -35,12 +35,7 @@ export class AppComponent {
     this.innerWidth = window.innerWidth;
     // Switch to 'Mobile' View
     if (this.innerWidth < 692) {
-      // toggle Navbar
-      document.getElementsByClassName('navbar-nav')[0].classList.add('hidden');
-      document.getElementsByClassName('navbar-toggle')[0].classList.remove('hidden');
-    } else if(this.innerWidth > 692) {
-      document.getElementsByClassName('navbar-nav')[0].classList.remove('hidden');
-      document.getElementsByClassName('navbar-toggle')[0].classList.add('hidden');
+    } else if (this.innerWidth > 692) {
     }
   };
   /** End: Responsive Design System */
