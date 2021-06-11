@@ -11,11 +11,13 @@
     padding: 3rem;
 }
 .spa-element {
+    @include theme-2-boxshadow-out();  
+    @include theme-2-border(); 
     display: none;
     margin: 3rem;
-    @include theme-2-boxshadow-out();
     border-radius: 10px;
     padding: 1rem;
+    justify-content: center;
 }
 .spa-active-element {
     display: flex;
