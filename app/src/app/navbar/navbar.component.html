@@ -1,6 +1,6 @@
 <div class="navbar d-flex d-flex-inline">
-  <span class="nav-branding d-flex-inline">Oliver Karger</span>
   <div class="navbar-nav d-flex-inline">
+    <span class="nav-branding d-flex-inline">Oliver Karger</span>
     <div class="nav-item d-flex d-flex-inline" (click)="this.callback('aboutMe')">
       <span>About Me</span>
     </div>
@@ -12,6 +12,12 @@
     </div>
     <div class="nav-item d-flex d-flex-inline" (click)="this.callback('contact')">
       <span>Contact</span>
+    </div>
+  </div>
+  <div class="navbar-optional d-flex d-flex-inline">
+    <div class="d-flex d-flex-inline view-on-github" (click)="this.openGithub()">
+      View on Github&nbsp;
+      <fa-icon [icon]="this.navViewOnGithub"></fa-icon>
     </div>
   </div>
 </div>

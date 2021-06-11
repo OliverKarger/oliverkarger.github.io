@@ -14,6 +14,7 @@
   top: 0;
   left: 0;
   position: fixed;
+  justify-content: space-between;
   .navbar-toggle {
     position: fixed;
     top: 0;
@@ -34,7 +35,8 @@
     @include theme-3-border();
   }
   .navbar-nav {
-    width: max-content;
+    width: fit-content;
+    align-items: flex-start;
     .nav-item {
       @include theme-3-inverted-border();
       padding: 1rem;
@@ -48,8 +50,23 @@
       @include theme-3-inverted-textshadow();
     }
   }
+  .navbar-optional {
+    width: max-content;
+    align-self: flex-end;
+    div {
+      @include theme-5-inverted-border();
+      padding: 1rem;
+      margin: 0;
+      cursor: pointer;
+    }
+    div:hover {
+      @include theme-5-inverted();
+      @include theme-5-border();
+      @include theme-5-inverted-boxshadow-in();
+      @include theme-5-inverted-textshadow();
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
-
 }

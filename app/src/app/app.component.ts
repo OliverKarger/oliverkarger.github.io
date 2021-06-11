@@ -6,7 +6,7 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Oliver Karger';
   innerWidth: number = 0;
 
   /** Start: Navigation Handling */
