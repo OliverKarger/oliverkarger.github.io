@@ -1,0 +1,44 @@
+<nav class="navbar">
+  <ul class="navbar-nav">
+    <li class="logo">
+      <a href="#" class="nav-link" (click)="this.onClick('home')">
+        <span class="link-text logo-text">Oliver Karger</span>
+        <fa-icon [icon]="this.navbarIcons.expand" size="lg"></fa-icon>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a href="#" class="nav-link" (click)="this.onClick('aboutme')">
+        <fa-icon [icon]="this.navbarIcons.home" size="lg"></fa-icon>
+        <span class="link-text">About Me</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a href="#" class="nav-link" (click)="this.onClick('projects')">
+        <fa-icon [icon]="this.navbarIcons.projects" size="lg"></fa-icon>
+        <span class="link-text">Projects</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a href="#" class="nav-link" (click)="this.onClick('services')">
+        <fa-icon [icon]="this.navbarIcons.services" size="lg"></fa-icon>
+        <span class="link-text">Services</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a href="#" class="nav-link" (click)="this.onClick('resume')">
+        <fa-icon [icon]="this.navbarIcons.resume" size="lg"></fa-icon>
+        <span class="link-text">Résumé</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link" (click)="this.onClick('contact')">
+        <fa-icon [icon]="this.navbarIcons.contact" size="lg"></fa-icon>
+        <span class="link-text">Contact</span>
+      </a>
+    </li>
+  </ul>
+</nav>

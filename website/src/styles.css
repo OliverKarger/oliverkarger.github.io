@@ -1,0 +1,35 @@
+/** Start: Global CSS */
+:root {
+  --bg-secondary: rgb(7, 59, 76);
+  --bg-primary: rgb(5, 34, 43);
+  --color-blue: rgb(17, 138, 178);
+  --color-green: rgb(6, 214, 160);
+  --color-yellow: rgb(255, 209, 102);
+  --color-red: rgb(239, 71, 111);
+  --default-text: rgb(232, 232, 232);
+  --transition-speed: 200ms;
+  font-size: 16px;
+  font-family: "Open Sans";
+}
+/** End: Global CSS */
+
+/** Start: All Things HTML Body related */
+body {
+  color: black;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+/** End: All Things HTML Body related */
